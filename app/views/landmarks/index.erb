@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Landmarks</title>
+  </head>
+
+  <body>
+  <% @landmarks.each do |landmark| %>
+    <li> <a href="/landmarks/<%= landmark.id %>"> <%= landmark.name %> </a></li>
+    <li><%= landmark.year_completed %>
+  <% end %><br>
+  <a class="button" href="landmarks/new">Create New Landmark</a>
+  <a class="button" href="/figures">View Figures </a>
+  </body>
+</html>

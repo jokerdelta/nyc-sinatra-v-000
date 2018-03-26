@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Figures List</title>
+  </head>
+
+  <body>
+
+    <h1>Famous Figures of NYC</h1>
+    <table>
+        <th>Figure Name</th>
+        <tr>
+  <% @figures.each do |figure| %>
+    <td align="center"><a href="/figures/<%= figure.id %>"> <%= figure.name %> </a>
+      <ul>
+        <%figure.titles.each do |title|%>
+        <li><%=title.name%></li>
+        <%end%>
+          </ul>
+      </tr></td>
+        <%end%>
+      </table>
+      <br>
+      <a class="button" href="/">Main Page</a>
+  </body>
+</html>
